@@ -7,6 +7,7 @@ import android.widget.EditText;
 import android.widget.Button;
 import android.view.View;
 import android.widget.Toast;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
     EditText email ;
@@ -59,6 +60,10 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         else return false;
+    }
+    public void CallStep2(View view){
+
+        startActivity(new Intent(MainActivity.this, SignupStep2.class));
     }
 
         }
