@@ -9,27 +9,35 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.sinhhx.ex1.MainActivity">
 
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
 
     <EditText
         android:id="@+id/Text1"
-        android:layout_width="190dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:text="First name" />
 
     <EditText
-        android:id="@+id/Text2"
-        android:layout_width="190dp"
+        android:id="@+id/Li"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/Text1"
         android:text="Last name"
-
+        android:layout_weight="1"
         />
+    </LinearLayout>
 
     <EditText
         android:id="@+id/Text3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/Text1"
+        android:layout_below="@id/linear"
         android:text="abc@gmail" />
 
     <EditText

@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
     public boolean checkPhone(String phone){
-        String regix="^[0-9]";
+        String regix="^[0-9]{10,13}$";
         if(phone.matches(regix)){
             return true;
         }
