@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),
                             "success", Toast.LENGTH_SHORT)
                             .show();
+                    CallStep2();
                 }
 
             }
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else return false;
     }
-    public void CallStep2(View view){
+    public void CallStep2(){
 
         startActivity(new Intent(MainActivity.this, SignupStep2.class));
     }

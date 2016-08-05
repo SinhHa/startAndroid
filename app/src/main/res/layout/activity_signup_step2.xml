@@ -9,14 +9,101 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.sinhhx.ex1.SignupStep2">
     <TextView
-        android:id="@+id/Text1"
+        android:id="@+id/Textview1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Your salary:"
         />
     <SeekBar
+        android:id="@+id/SeekerBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Textview1"
+        android:max="100000"
+        />
+    <TextView
+        android:id="@+id/Textview2"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/Text1"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SeekerBar"
+        android:text="0"
+        />
+    <TextView
+        android:id="@+id/Textview3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100000"
+        android:layout_alignRight="@id/SeekerBar"
+        android:layout_below="@id/SeekerBar"
+        />
+    <TextView
+        android:id="@+id/Textview4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Which sport do you like?"
+        android:layout_below="@+id/Textview2"
+        />
+    <LinearLayout
+        android:id="@+id/cblayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:layout_below="@id/Textview4">
+
+
+       <CheckBox
+           android:id="@+id/Football"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:text="Football"
+           android:layout_weight="1"/>
+        <CheckBox
+            android:id="@+id/Tennis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Tennis"
+            android:layout_weight="1"/>
+        <CheckBox
+            android:id="@+id/PingPong"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Ping Pong"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/cblayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:layout_below="@id/cblayout1">
+
+
+        <CheckBox
+            android:id="@+id/Swimming"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Swimming"
+            android:layout_weight="1"/>
+        <CheckBox
+            android:id="@+id/VolleyBall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="VolleyBall"
+            android:layout_weight="1"/>
+        <CheckBox
+            android:id="@+id/BasketBall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Basketball"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/Donebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cblayout2"
+        android:layout_centerHorizontal="true"
+        android:background="#ff4081"
+        android:text="Done"
         />
 </RelativeLayout>
