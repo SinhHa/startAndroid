@@ -1,18 +1,20 @@
 package com.example.sinhhx.ex1;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.text.TextWatcher;
-import android.widget.EditText;
-import android.widget.Button;
-import android.view.View;
-import android.widget.Toast;
 import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
     EditText email ;
     EditText CheckPhone;
+    EditText Fname;
+    EditText Lname;
+    String CheckFname;
     String checkString;
+    String checkLname;
     String phone;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,25 +24,29 @@ public class MainActivity extends AppCompatActivity {
         final Button button = (Button) findViewById(R.id.btn1);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
                 email = (EditText)findViewById(R.id.Text3);
                 CheckPhone = (EditText)findViewById(R.id.Text4);
+                Fname = (EditText)findViewById(R.id.Text1);
+                Lname = (EditText)findViewById(R.id.Text2);
               checkString = email.getText().toString().trim();
                 phone= CheckPhone.getText().toString().trim();
+                CheckFname =Fname.getText().toString().trim();
+                checkLname =Lname.getText().toString().trim();
+                if(CheckFname.equals("First name") || CheckFname.equals("")){
+                    Fname.setError("Invalid Name");
+                }
+                if(checkLname.equals("Last name") || checkLname.equals("")){
+                    Lname.setError("Invalid Name");
+                }
                 if ((checEmail(checkString)==false)) {
-                    Toast.makeText(getApplicationContext(),
-                            "Wrong Email Format", Toast.LENGTH_SHORT)
-                            .show();
+                    email.setError("invalid Email");
                 }
                 if(checkPhone(phone)==false){
-                    Toast.makeText(getApplicationContext(),
-                            "Invalid phone number", Toast.LENGTH_SHORT)
-                            .show();
+                    CheckPhone.setError("invalid phone number");
                 }
 
                 else{
-                    Toast.makeText(getApplicationContext(),
-                            "success", Toast.LENGTH_SHORT)
-                            .show();
                     CallStep2();
                 }
 
