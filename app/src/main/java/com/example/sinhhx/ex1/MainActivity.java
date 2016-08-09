@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     String checkString;
     String checkLname;
     String phone;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,11 +34,20 @@ public class MainActivity extends AppCompatActivity {
                 phone= CheckPhone.getText().toString().trim();
                 CheckFname =Fname.getText().toString().trim();
                 checkLname =Lname.getText().toString().trim();
-                if(CheckFname.equals("First name") || CheckFname.equals("")){
-                    Fname.setError("Invalid Name");
+                if(CheckFname.equals("First name")) {
+                    Fname.setError("Invalid First Name");
+
                 }
-                if(checkLname.equals("Last name") || checkLname.equals("")){
-                    Lname.setError("Invalid Name");
+                if(CheckFname.equals("")) {
+                    Fname.setError("You must enter First Name");
+
+                }
+                if(checkLname.equals("Last name") ){
+                    Lname.setError("Invalid Last Name");
+                }
+                if(checkLname.equals("")) {
+                    Fname.setError("you must enter Last Name");
+
                 }
                 if ((checEmail(checkString)==false)) {
                     email.setError("invalid Email");
@@ -48,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
                 else{
                     CallStep2();
+                    finish();
                 }
 
             }
