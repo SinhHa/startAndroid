@@ -21,14 +21,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="First name" />
+        android:hint="First name" />
 
     <EditText
         android:id="@+id/Text2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/Text1"
-        android:text="Last name"
+        android:hint="Last name"
         android:layout_weight="1"
         />
     </LinearLayout>
@@ -38,14 +38,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/linear"
-        android:text="abc@gmai" />
+        android:hint="abc@gmai" />
 
     <EditText
         android:id="@+id/Text4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/Text3"
-        android:text="Phone Number" />
+        android:hint="Phone Number" />
 
     <RadioGroup
         android:id="@+id/Group1"

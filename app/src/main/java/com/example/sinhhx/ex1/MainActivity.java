@@ -80,8 +80,13 @@ public class MainActivity extends AppCompatActivity {
         else return false;
     }
     public void CallStep2(){
+            Intent i= new Intent(MainActivity.this,SignupStep2.class);
+            i.putExtra("FirstName",CheckFname);
+            i.putExtra("LastName",checkLname);
+            i.putExtra("Email",checkString);
+            i.putExtra("Phone",phone);
+        startActivity(i);
 
-        startActivity(new Intent(MainActivity.this, SignupStep2.class));
     }
 
         }
